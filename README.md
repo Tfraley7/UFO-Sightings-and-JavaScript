@@ -7,9 +7,10 @@ August 31, 2022<br/>
 <p/>
 <br/>
 <p align="center">
-  <img width="460" height="200" src="../images/Ancient%20Aliens.jpeg">
+  <img width="460" height="400" src="images/Ancient%20Aliens.jpeg">
 </p>
 <br/>
+
 ## Overview of the Analysis
 For this analysis I helped build a dynamic table on a webpage. The table displays information regarding UFO sightings around the world. To create this interactive table I used html, CSS, Bootstrap, and JavaScript. With the help of JavaScript I could store the data as an array, or list. The dynamic table would allow users to be able to analyze UFO sightings through filter options  that include the date, city, state, contury, and shape of the unidentified aircraft.
 
@@ -19,7 +20,7 @@ To kick off the study on the right start I used a data.js file which included a 
 <p/>
 <br/>
 <p align="center">
-  <img width="460" height="200" src="../images/buildTable.jpeg">
+  <img width="460" height="300" src="images/buildTable.png">
 </p>
 <br/>
 Next in the anlaysis I wanted to be able to filter through the data in the table. This was done by first creating a variable (var filters={};). This allows me to compartmentalize all of the filters that I have active. Now, a filter is an object that contains value types of the filter and its value. The type of filter has a name of the filter (think date or city) and a value is the parameter that the filter takes on (think dat: 01,10,2010). So in this case the value for city could be "Phoenix." The type of filter used could be text or select and a filter with text as the type will refer to rows that have a value equal to the value of the filter of a specific column. 
@@ -27,22 +28,24 @@ To save teh elements that were changed as a variable I used var changedElement =
 <p/>
 <br/>
 <p align="center">
-  <img width="460" height="200" src="../images/filter.jpeg">
+  <img width="560" height="400" src="images/filter.png">
 </p>
 <br/>
 Near the end of the coding process for the app.js file I created a variable to set the filtered data to the table data (var filteredData = tableData;). I thne looped through all of the filters and saved data that matched the filtered values. This was done by coding : Object.entries(filters).forEach(([key, value]) =>{ filteredData = filteredData.filter(row => row[key] === value);}];. I then used tableBuild(filteredData) to rebuild the table with filtered data. Then I used d3.selectAll("input").on("change", updateFilters) to attatch any events to be aware of changes to the filters. Finally, buildTable(tableData) was used to build the table once the page loads. In the body of the html file I used <script src="static/js/app.js"></script> and <script src="static/js/data.js"></script> to load the data table into the webpage. 
 <p/>
 <br/>
 <p align="center">
-  <img width="460" height="200" src="../images/dynamictable.jpeg">
+  <img width="960" height="500" src="images/dynamictable.png">
 </p>
 <br/>
+
 ### Summary
+<br/>
 This analysis was a lot of fun and added some fascinating new tools I can use in the future. There is a draw back in the study though, I think the dynamic table needs to be more interactive. Some filters should have an ability to show you what element they have. For instance, the "city" doesn't tell you what cities are in the data set. This can cause some confusion or unnecessary key strokes to find desired UFO info based on a desired city that may not exist in the data set. I would recommend appending specific cities and countries to the filter table in a list format when the filters are clicked. This way the user knows exactly what elements are within that filter. In addition, I would recommend an export to csv option in a button format. This way someone can filter the table and export what they filtered to a csv file. 
 <p/>
 <br/>
 <p align="center">
-  <img width="460" height="200" src="../images/ufo.jpeg">
+  <img width="460" height="200" src="images/ufo.jpeg">
 </p>
 <br/>
 
