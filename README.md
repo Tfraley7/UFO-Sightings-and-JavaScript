@@ -1,5 +1,5 @@
 # UFO-Sightings-and-JavaScript
-Using Python and JavaScript to analyze UFO sightings.
+Using JavaScript to analyze UFO sightings.
 <br/>
 <p align="center">Tyrone Fraley<br/>
 UC Berkley Extension<br/>
